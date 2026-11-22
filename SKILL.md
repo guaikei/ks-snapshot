@@ -6,6 +6,11 @@ name: ks-snapshot
 description: "快手数据快照数据源（只读）：关键词搜视频、博主作品与粉丝数据、视频评论，输出 JSON，不登录不发布。触发词：快手、Kuaishou、kwai、快手搜索、快手评论、快手博主。用户要查快手视频、评论、爆款选题、竞品监控、KOL 筛选或评论舆情时使用；抖音、小红书、B站、微博、公众号不要用本技能。"
 license: MIT
 version: 1.1.3
+display_name: "快手数据快照｜时点留档·涨粉回溯·版本对比·周期复盘"
+display_name_en: "Kuaishou Snapshot"
+description_zh: "快手数据快照数据源（只读，无需登录你的快手账号，不发布不点赞不评论，无风控封号问题）：把某个时点的快手公开数据固化成结构化 JSON，供 AI 做月度存档、涨粉回溯、版本对比和周期复盘。\n\n三类取数能力：①关键词搜索视频，支持综合/最新发布/最多点赞排序，叠加近 1 日/近 7 日/近 1 月时间筛选和 1 分钟内/1-5 分钟/超 5 分钟时长筛选；②博主作品抓取，--limit 0 只返回粉丝数、获赞数、关注数与博主资料，适合建立粉丝基线与涨粉曲线；③单条作品评论抓取，留存当期舆情样本，便于下期对比口碑变化。\n\n复盘打法：月初取一次基线快照，月末同参再取一次，用两份 JSON 做同比环比与内容结构对比，输出周期复盘结论。加 --save 或 GUAIKEI_ENABLE_LOG=1 可留底日志到临时目录 kuaishou-guaikei/logs/。\n\n规模：按量 Token 单次最多 10000 条；包月搜索最多 30 条、作品最多 50 条、评论最多 60 条，超限返回 PLAN_LIMIT。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零第三方依赖。"
+description_en: "Read-only Kuaishou snapshot source, no login, no ban risk. Freezes public Kuaishou data as structured JSON so AI can build monthly archives, trace follower growth, compare versions and run period reviews.\n\nThree capabilities: 1) Keyword video search sorted by relevance, newest or most liked, with 1-day, 7-day and 30-day windows plus duration filters. 2) Creator post listing; --limit 0 returns profile, follower, like and following counts only, ideal for baselines and growth curves. 3) Comment scraping on a single video to keep a sentiment sample for the period.\n\nReview recipe: take a baseline snapshot at month start, repeat with identical parameters at month end, then diff the two JSON files for period-over-period deltas. Add --save or GUAIKEI_ENABLE_LOG=1 to keep logs under kuaishou-guaikei/logs/.\n\nScale: pay-as-you-go up to 10,000 items per call; monthly plans cap search at 30, posts at 50 and comments at 60, then PLAN_LIMIT. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "📷"
