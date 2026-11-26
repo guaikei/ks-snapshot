@@ -31,7 +31,7 @@
 
 ## 2. 🚀 快速使用
 
-> **Note:** 请先访问[快手复盘内容分析API官网](https://www.guaikei.com)开通 TOKEN，配置环境变量 `GUAIKEI_API_TOKEN` 后才能正常运行。
+> **Note:** 请先访问[快手直播复盘分析API官网](https://www.guaikei.com)开通 TOKEN，配置环境变量 `GUAIKEI_API_TOKEN` 后才能正常运行。
 
 ### 2.1 快手关键词搜索
 
@@ -91,4 +91,4 @@ node scripts/kuaishou/comment-cli.js --url "https://www.kuaishou.com/short-video
 
 ## 6. 📞 帮助与支持
 
-- 通过 [快手复盘账号数据接口](https://www.guaikei.com) 自助开通 TOKEN 或查阅使用帮助。
+- 通过 [快手直播复盘数据接口](https://www.guaikei.com) 自助开通 TOKEN 或查阅使用帮助。
